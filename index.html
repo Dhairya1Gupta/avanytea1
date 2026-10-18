@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Leaf Tea & Cardamom</title>
+    <meta
+      name="description"
+      content="Fresh tea and cardamom products, delivered with WhatsApp ordering and secure payment coordination."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-mark">✦</span>
+          <div>
+            <strong>Golden Leaf</strong>
+            <small>Tea & Cardamom</small>
+          </div>
+        </div>
+        <nav>
+          <a href="#shop">Shop</a>
+          <a href="#benefits">Why Us</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="cart-button" type="button" aria-label="Open cart">
+          Cart <span id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">Farm fresh flavour</p>
+            <h1>Tea and cardamom made for slow, rich moments.</h1>
+            <p class="subtitle">
+              Handpicked spice and premium tea blends, packed with freshness and
+              delivered straight to your door.
+            </p>
+            <div class="cta-row">
+              <a href="#shop" class="primary-btn">Shop now</a>
+              <a href="https://wa.me/9919871131?text=Hello%20Golden%20Leaf%20Tea%20and%20Cardamom%2C%20I%20want%20to%20place%20an%20order." class="secondary-btn" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <strong>4.9/5</strong>
+                <span>Customer rating</span>
+              </div>
+              <div>
+                <strong>2k+</strong>
+                <span>Orders delivered</span>
+              </div>
+              <div>
+                <strong>48h</strong>
+                <span>Fast dispatch</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="product-showcase">
+              <img
+                src="Avany Green Cardamom Label.png"
+                alt="Premium tea leaves"
+              />
+              <div class="floating-tag">Fresh harvest</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits" id="benefits">
+        <div class="container benefits-grid">
+          <article>
+            <span>🌿</span>
+            <h3>Pure ingredients</h3>
+            <p>No artificial flavours, no additives, just clean, natural taste.</p>
+          </article>
+          <article>
+            <span>🚚</span>
+            <h3>Nationwide delivery</h3>
+            <p>Freshly packed and delivered with reliable, secure shipping.</p>
+          </article>
+          <article>
+            <span>💬</span>
+            <h3>WhatsApp payment</h3>
+            <p>Place your order and confirm payment through a WhatsApp chat.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="shop" id="shop">
+        <div class="container section-header">
+          <div>
+            <p class="eyebrow">Our collection</p>
+            <h2>Signature tea and cardamom</h2>
+          </div>
+          <p>Freshly sourced and carefully roasted for premium quality.</p>
+        </div>
+
+        <div class="container products-grid" id="product-grid"></div>
+      </section>
+
+      <section class="checkout-area">
+        <div class="container checkout-layout">
+          <div class="cart-panel">
+            <div class="panel-header">
+              <h3>Your cart</h3>
+              <button type="button" class="text-button" id="clear-cart">Clear</button>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="totals">
+              <div><span>Subtotal</span> <strong id="subtotal">Rs 0</strong></div>
+              <div><span>Delivery</span> <strong id="shipping">Rs 0</strong></div>
+              <div class="grand-total"><span>Total</span> <strong id="total">Rs 0</strong></div>
+            </div>
+          </div>
+
+          <form id="checkout-form" class="checkout-form">
+            <h3>Checkout</h3>
+            <div class="field-grid">
+              <label>
+                Full name
+                <input type="text" id="customer-name" placeholder="Your name" required />
+              </label>
+              <label>
+                Phone number
+                <div class="phone-row">
+                  <select id="country-code" aria-label="Country code">
+                    <option value="+91" selected>+91</option>
+                    <option value="+254">+254</option>
+                    <option value="+1">+1</option>
+                    <option value="+44">+44</option>
+                  </select>
+                  <input
+                    type="tel"
+                    id="customer-phone"
+                    placeholder="712345678"
+                    inputmode="numeric"
+                    minlength="10"
+                    maxlength="10"
+                    pattern="[0-9]{10}"
+                    required
+                  />
+                </div>
+              </label>
+            </div>
+            <label>
+              Delivery address
+              <textarea id="customer-address" rows="4" placeholder="Street, city, and landmark" required></textarea>
+            </label>
+            <label>
+              Notes
+              <textarea id="customer-notes" rows="3" placeholder="Optional instructions"></textarea>
+            </label>
+            <div class="payment-box">
+              <h4>Payment method</h4>
+              <div class="payment-option">
+                <input type="radio" name="payment" value="WhatsApp" checked />
+                <label>Pay through WhatsApp chat</label>
+              </div>
+            </div>
+            <button type="submit" class="primary-btn full-width">Pay via WhatsApp</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="reviews" id="reviews">
+        <div class="container section-header">
+          <div>
+            <p class="eyebrow">Customer love</p>
+            <h2>Trusted by tea lovers</h2>
+          </div>
+        </div>
+        <div class="container review-grid">
+          <article>
+            <p>“The cardamom is incredibly fresh and the tea is smooth with a rich aroma. Ordering took minutes and the delivery was prompt.”</p>
+            <div class="reviewer"><strong>Ananya S.</strong><span>Kanpur,UP</span></div>
+          </article>
+          <article>
+            <p>“Beautiful packaging and excellent quality. I loved how easy it was to finish the order through WhatsApp.”</p>
+            <div class="reviewer"><strong>Rohan K.</strong><span>Indore,MP</span></div>
+          </article>
+          <article>
+            <p>“The tea blend has a warm, natural aroma and the cardamom is exactly what I wanted for my homemade chai.”</p>
+            <div class="reviewer"><strong>Priya A.</strong><span>NOIDA,UP</span></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-inner">
+        <div>
+          <h3>Golden Leaf</h3>
+          <p>Fresh tea and cardamom for everyday rituals.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>WhatsApp: +91 9919871131</p>
+          <p>Email: dhairya1gupta@gmail.com</p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/919919871131?text=Hello%20Golden%20Leaf%20Tea%20and%20Cardamom%2C%20I%20need%20help%20with%20my%20order."
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      WhatsApp
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
